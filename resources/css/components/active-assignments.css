@@ -1,0 +1,253 @@
+.active-assignments {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.active-assignments__header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: var(--spacing-md);
+}
+
+.active-assignments__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-heading);
+}
+
+.active-assignments__view-all {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+    transition: color var(--transition-fast);
+}
+
+.active-assignments__view-all:hover {
+    color: var(--color-primary-dark);
+}
+
+.active-assignments__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.active-assignments__empty {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.active-assignments__empty p {
+    color: var(--color-text-muted);
+    font-size: 0.9375rem;
+    margin: 0;
+}
+
+/* ── Assignment Row ── */
+
+.assignment-row {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-md) 0;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.assignment-row:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.assignment-row:first-child {
+    padding-top: 0;
+}
+
+/* Icon */
+
+.assignment-row__icon {
+    flex-shrink: 0;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.assignment-row__icon svg {
+    width: 20px;
+    height: 20px;
+}
+
+.assignment-row__icon--warning {
+    background-color: var(--color-warning-lighter);
+    color: var(--color-warning);
+}
+
+.assignment-row__icon--info {
+    background-color: var(--color-info-lighter);
+    color: var(--color-info);
+}
+
+.assignment-row__icon--success {
+    background-color: var(--color-success-lighter);
+    color: var(--color-success);
+}
+
+.assignment-row__icon--danger {
+    background-color: var(--color-error-lighter);
+    color: var(--color-error);
+}
+
+.assignment-row__icon--neutral {
+    background-color: var(--color-neutral-lighter);
+    color: var(--color-neutral);
+}
+
+/* Info */
+
+.assignment-row__info {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.assignment-row__title {
+    margin: 0;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-text-heading);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.assignment-row__meta {
+    margin: 0;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.assignment-row__professor {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+
+.assignment-row__badges {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    flex-wrap: wrap;
+    margin-top: 0.15rem;
+}
+
+/* Status badge */
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.15rem 0.6rem;
+    border-radius: var(--radius-full);
+    font-size: 0.75rem;
+    font-weight: 600;
+    border: 1px solid transparent;
+}
+
+.badge--neutral {
+    background-color: var(--color-neutral-lighter);
+    color: var(--color-text-muted);
+    border-color: var(--color-border);
+}
+
+.badge--neutral::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-neutral-light);
+    flex-shrink: 0;
+}
+
+.badge--danger {
+    background-color: var(--color-error-lighter);
+    color: var(--color-error);
+    border-color: var(--color-error-light);
+}
+
+.badge--danger::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-error);
+    flex-shrink: 0;
+}
+
+.badge--success {
+    background-color: var(--color-success-lighter);
+    color: var(--color-success);
+    border-color: var(--color-success-light);
+}
+
+.badge--success::before {
+    content: '';
+    width: 6px;
+    height: 6px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-success);
+    flex-shrink: 0;
+}
+
+/* Due date label */
+
+.assignment-row__due {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.assignment-row__due svg {
+    width: 13px;
+    height: 13px;
+    flex-shrink: 0;
+}
+
+.assignment-row__due--danger {
+    color: var(--color-error);
+}
+
+.assignment-row__due--warning {
+    color: var(--color-warning);
+}
+
+.assignment-row__due--muted {
+    color: var(--color-text-muted);
+}
+
+/* Actions */
+
+.assignment-row__actions {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.btn-sm {
+    padding: 0.35rem 0.875rem;
+    font-size: 0.8125rem;
+    border-radius: var(--radius-md);
+}

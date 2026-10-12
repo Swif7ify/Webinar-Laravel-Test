@@ -1,0 +1,12 @@
+.welcome-message {
+    margin-bottom: var(--spacing-xl);
+}
+
+.welcome-heading {
+    margin: 0 0 var(--spacing-xs) 0;
+    color: var(--color-text-dark);
+}
+
+.welcome-subtitle {
+    margin: 0;
+}

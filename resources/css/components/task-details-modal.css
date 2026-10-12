@@ -1,0 +1,219 @@
+/* resources/css/components/task-details-modal.css */
+
+.task-details-modal-panel {
+    max-width: 800px;
+    width: 95%;
+}
+
+.task-details-modal-panel .app-modal-body {
+    padding: var(--spacing-xl) var(--spacing-2xl);
+}
+
+.task-details-single-col {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-xl);
+}
+
+.task-details-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.task-details-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0 0 var(--spacing-xs) 0;
+}
+
+.task-details-subtitle {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.task-details-subtitle-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.task-details-subtitle-item svg {
+    width: 16px;
+    height: 16px;
+    stroke: currentColor;
+    fill: none;
+    stroke-width: 2;
+}
+
+.task-details-close-btn {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    padding: 4px;
+    border-radius: var(--radius-sm);
+    transition: background-color var(--transition-fast), color var(--transition-fast);
+}
+
+.task-details-close-btn:hover {
+    background-color: var(--color-bg-subtle);
+    color: var(--color-text-dark);
+}
+
+.task-details-close-btn svg {
+    width: 20px;
+    height: 20px;
+}
+
+.task-details-section {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.task-details-section-heading {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.task-details-section-heading.text-primary {
+    color: var(--color-primary);
+}
+
+.task-details-section-heading svg {
+    width: 18px;
+    height: 18px;
+}
+
+.task-details-instructions-box {
+    background-color: #F8FAFC;
+    /* Light slate/grey */
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-xl);
+    font-size: 1rem;
+    line-height: 1.6;
+    color: var(--color-text-dark);
+}
+
+.task-details-instructions-box p {
+    margin: 0 0 var(--spacing-sm);
+}
+
+.task-details-instructions-box p:last-child {
+    margin: 0;
+}
+
+.task-details-instructions-empty {
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+.task-details-resources-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-xs);
+}
+
+.task-details-download-all {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+.task-details-download-all:hover {
+    text-decoration: underline;
+}
+
+.task-details-file-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+}
+
+.task-details-file-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    background-color: var(--color-bg-white);
+    gap: var(--spacing-md);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+    text-decoration: none;
+    color: inherit;
+}
+
+.task-details-file-item:hover {
+    border-color: var(--color-primary-light);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+.task-details-file-icon {
+    width: 48px;
+    height: 48px;
+    background-color: #F1F5F9;
+    /* Slate 100 */
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-text-muted);
+}
+
+.task-details-file-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.task-details-file-meta {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.task-details-file-name {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 0.9375rem;
+    margin-bottom: 2px;
+}
+
+.task-details-file-size {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.task-details-no-files {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    font-style: italic;
+}
+
+@media (max-width: 640px) {
+    .task-details-modal-panel .app-modal-body {
+        padding: var(--spacing-lg);
+    }
+
+    .task-details-subtitle {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: var(--spacing-xs);
+    }
+}

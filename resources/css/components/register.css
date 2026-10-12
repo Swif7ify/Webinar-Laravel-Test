@@ -1,0 +1,139 @@
+/* Specific styles for the register page that differ softly from the login page */
+
+.features-card {
+    background-color: var(--color-bg-white);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-md);
+    max-width: 380px;
+    margin-top: var(--spacing-xl);
+}
+
+.features-card__header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-lg);
+}
+
+.features-card__icon {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary-lightest);
+    color: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.features-card__info {
+    flex: 1;
+    min-width: 0;
+}
+
+.features-card__title {
+    display: block;
+    font-size: 0.9375rem;
+    font-weight: 700;
+    color: var(--color-text-heading);
+}
+
+.features-card__subtitle {
+    display: block;
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+}
+
+.features-card__badge {
+    display: inline-flex;
+    align-items: center;
+    background-color: var(--color-success-lighter);
+    color: var(--color-success);
+    font-size: 0.6875rem;
+    font-weight: 700;
+    padding: 3px var(--spacing-sm);
+    border-radius: var(--radius-full);
+    flex-shrink: 0;
+}
+
+.features-card__list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.features-card__item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    background-color: var(--color-bg);
+    border-radius: var(--radius-md);
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-text-dark);
+}
+
+.features-card__item-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.features-card__item-icon--success {
+    background-color: var(--color-success-lighter);
+    color: var(--color-success);
+}
+
+.features-card__item-icon--primary {
+    background-color: var(--color-primary-lightest);
+    color: var(--color-primary);
+}
+
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-md);
+}
+
+.terms-checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    margin-top: var(--spacing-xs);
+}
+
+.terms-checkbox-wrapper input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    accent-color: var(--color-primary);
+    flex-shrink: 0;
+    margin: 0;
+}
+
+.terms-checkbox-wrapper a {
+    color: var(--color-primary);
+    font-weight: 400;
+    text-decoration: underline;
+}
+
+@media (max-width: 640px) {
+    .form-row-2 {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-lg);
+    }
+}
+
+.register-panel {
+    max-width: 500px;
+}

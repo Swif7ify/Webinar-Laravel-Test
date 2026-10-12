@@ -1,0 +1,244 @@
+/* resources/css/components/grading-page.css */
+
+.grade-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: var(--spacing-xl);
+    margin-top: var(--spacing-lg);
+    align-items: start;
+}
+
+.grade-main {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.grade-card {
+    background: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.3s ease;
+}
+
+.grade-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.grade-card-header {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--color-bg-white);
+}
+
+.grade-card-header.primary {
+    background: var(--color-primary);
+    border-bottom: none;
+}
+
+.grade-card-header.primary .grade-card-title {
+    color: var(--color-bg-white);
+}
+
+.grade-card-title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.submission-meta {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.grade-card-body {
+    padding: var(--spacing-xl);
+}
+
+.files-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-md);
+}
+
+.file-item {
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-md);
+    background: var(--color-bg-subtle);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    transition: all 0.2s ease;
+}
+
+.file-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    background: var(--color-bg-white);
+    border-radius: var(--radius-md);
+    margin-right: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.file-icon svg {
+    width: 24px;
+    height: 24px;
+}
+
+.file-info {
+    flex: 1;
+}
+
+.file-name {
+    font-weight: 600;
+    color: var(--color-text-dark);
+    font-size: 0.9375rem;
+    margin-bottom: 2px;
+}
+
+.file-size {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    font-weight: 500;
+}
+
+.task-instructions {
+    font-size: 0.9375rem;
+    color: var(--color-text-dark);
+    line-height: 1.7;
+}
+
+/* Sidebar Styling */
+.grade-sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+    position: sticky;
+    top: var(--spacing-lg);
+}
+
+.student-info-card {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+.student-avatar-large {
+    width: 56px;
+    height: 56px;
+    background: var(--color-primary-lightest);
+    color: var(--color-primary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.student-details-mini {
+    display: flex;
+    flex-direction: column;
+}
+
+.student-name-large {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.student-email-mini {
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.grading-form {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.submission-status-card {
+    background: var(--color-bg-subtle);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.status-label {
+    font-size: var(--font-size-xs);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-text-muted);
+    margin: 0;
+}
+
+.status-badge-container {
+    padding: var(--spacing-xs) 0;
+}
+
+.status-badge {
+    padding: var(--spacing-xs) var(--spacing-lg);
+    border-radius: var(--radius-full);
+    font-weight: 700;
+    font-size: var(--font-size-sm);
+    text-transform: uppercase;
+}
+
+.status-badge.status-pending {
+    background: var(--color-warning-subtle);
+    color: var(--color-warning);
+}
+
+.status-badge.status-checked {
+    background: var(--color-success-subtle);
+    color: var(--color-success);
+}
+
+.checked-confirmation {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--spacing-sm);
+    color: var(--color-success);
+    text-align: center;
+    padding: var(--spacing-md);
+}
+
+.checked-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.checked-confirmation p {
+    font-weight: 600;
+    font-size: var(--font-size-sm);
+    margin: 0;
+}
+
+@media (max-width: 1024px) {
+    .grade-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .grade-sidebar {
+        position: static;
+    }
+}

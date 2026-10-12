@@ -1,0 +1,82 @@
+.app-header {
+    background-color: var(--color-bg-white);
+    border-bottom: 1px solid var(--color-border);
+    padding: 0 var(--spacing-xl);
+    height: 72px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+.header-title h1 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: var(--color-text-dark);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-lg);
+}
+
+.header-profile-trigger {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: var(--spacing-xs) var(--spacing-sm);
+    border-radius: var(--radius-md);
+    transition: background-color var(--transition-fast);
+}
+
+.header-profile-trigger:hover {
+    background-color: var(--color-neutral-lighter);
+}
+
+.header-avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--radius-full);
+    object-fit: cover;
+    background-color: var(--color-bg-subtle);
+}
+
+.header-profile-info {
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-profile-name {
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    line-height: 1.2;
+}
+
+.header-profile-role {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    line-height: 1.2;
+}
+
+.header-profile-chevron {
+    width: 16px;
+    height: 16px;
+    color: var(--color-text-muted);
+    margin-left: var(--spacing-xs);
+}
+
+/* User dropdown from Jetstream/Breeze */
+.header-profile-dropdown {
+    position: relative;
+    margin-left: var(--spacing-lg);
+    border-left: 1px solid var(--color-border);
+    padding-left: var(--spacing-lg);
+}

@@ -1,0 +1,236 @@
+/* Calendar Page Styles */
+.calendar-page-container {
+    padding: var(--spacing-xl);
+    background: var(--color-bg);
+    min-height: calc(100vh - 80px);
+}
+
+.calendar-card {
+    background: var(--color-bg-white);
+    border-radius: var(--radius-xl);
+    box-shadow: var(--shadow-lg);
+    padding: var(--spacing-xl);
+    border: 1px solid var(--color-border);
+    overflow: hidden;
+}
+
+/* FullCalendar Variables Customization */
+:root {
+    --fc-border-color: var(--color-bg-subtle);
+    --fc-today-bg-color: rgba(110, 86, 207, 0.03);
+    --fc-button-bg-color: var(--color-primary);
+    --fc-button-border-color: var(--color-primary);
+    --fc-button-hover-bg-color: var(--color-primary-dark);
+    --fc-button-hover-border-color: var(--color-primary-dark);
+    --fc-button-active-bg-color: var(--color-primary-dark);
+    --fc-button-active-border-color: var(--color-primary-dark);
+    --fc-event-text-color: var(--color-text-inverted);
+    --fc-page-bg-color: var(--color-bg-white);
+}
+
+#calendar {
+    font-family: var(--font-sans);
+    color: var(--color-text-dark);
+}
+
+/* Toolbar Styling */
+.fc-toolbar {
+    margin-bottom: var(--spacing-lg) !important;
+}
+
+.fc-toolbar-title {
+    font-size: 1.5rem !important;
+    font-weight: 700 !important;
+    color: var(--color-text-heading);
+    letter-spacing: -0.02em;
+}
+
+.fc-button {
+    border-radius: 10px !important;
+    text-transform: capitalize !important;
+    font-weight: 600 !important;
+    padding: 0.6rem 1.2rem !important;
+    box-shadow: 0 4px 12px rgba(110, 86, 207, 0.2) !important;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+.fc-button:active {
+    transform: translateY(0) !important;
+}
+
+.fc-button-primary:not(:disabled).fc-button-active,
+.fc-button-primary:not(:disabled):active {
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Header Cells (Mon, Tue, Wed...) */
+.fc-col-header-cell {
+    background: var(--color-bg);
+    border-bottom: 2px solid var(--color-border) !important;
+}
+
+.fc-col-header-cell-cushion {
+    padding: var(--spacing-md) 0 !important;
+    font-size: 0.85rem;
+    font-weight: 700 !important;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--color-text-muted);
+    display: inline-block;
+}
+
+/* Grid Lines & Cells */
+.fc-theme-standard td,
+.fc-theme-standard th {
+    border-color: var(--color-bg-subtle);
+}
+
+.fc .fc-daygrid-day-frame {
+    min-height: 120px;
+    padding: 4px;
+    transition: background-color var(--transition-fast);
+}
+
+.fc-daygrid-day:hover .fc-daygrid-day-frame {
+    background-color: var(--color-bg);
+}
+
+/* Day Numbers */
+.fc-daygrid-day-top {
+    display: flex;
+    justify-content: flex-end;
+    padding: var(--spacing-sm) var(--spacing-md) !important;
+}
+
+.fc-daygrid-day-number {
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    color: var(--color-neutral-light) !important;
+    text-decoration: none !important;
+    border-radius: var(--radius-full) !important;
+    width: 32px !important;
+    height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.fc-daygrid-day-number:hover {
+    background-color: var(--color-border) !important;
+    color: var(--color-text-heading) !important;
+}
+
+/* Today highlight */
+.fc-day-today {
+    background-color: var(--color-primary-lightest) !important;
+}
+
+.fc-day-today .fc-daygrid-day-number {
+    background-color: var(--color-primary) !important;
+    color: var(--color-text-inverted) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+.fc-day-today .fc-daygrid-day-number:hover {
+    background-color: var(--color-primary-dark) !important;
+    color: var(--color-text-inverted) !important;
+}
+
+/* Events Styling */
+.fc-event {
+    border: none !important;
+    border-radius: var(--radius-sm) !important;
+    padding: 5px 10px !important;
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    margin: 3px 8px !important;
+    box-shadow: var(--shadow-sm) !important;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast) !important;
+    cursor: pointer !important;
+    color: var(--color-text-inverted) !important;
+}
+
+.fc-event-main {
+    padding: 0 !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    overflow: hidden;
+}
+
+.fc-event-time {
+    font-weight: 700 !important;
+    font-size: 0.75rem !important;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 2px 6px;
+    border-radius: var(--radius-sm);
+    white-space: nowrap;
+}
+
+.fc-event-title {
+    font-weight: 600 !important;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Hide the default dot for timed events since we use block display */
+.fc-daygrid-event-dot {
+    display: none !important;
+}
+
+/* More Link */
+.fc-daygrid-more-link {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    color: var(--color-text-muted) !important;
+    background: var(--color-bg-subtle) !important;
+    padding: 4px 12px !important;
+    border-radius: var(--radius-full) !important;
+    text-decoration: none !important;
+    display: inline-block;
+    margin: 4px 8px !important;
+    transition: all var(--transition-fast) !important;
+}
+
+.fc-daygrid-more-link:hover {
+    background: var(--color-border) !important;
+    color: var(--color-text-heading) !important;
+}
+
+/* Popover Styling */
+.fc-popover {
+    border-radius: var(--radius-lg) !important;
+    box-shadow: var(--shadow-lg) !important;
+    border: 1px solid var(--color-border) !important;
+    z-index: 1000 !important;
+    overflow: hidden;
+}
+
+.fc-popover-header {
+    background: var(--color-bg) !important;
+    font-weight: 600 !important;
+    padding: var(--spacing-md) var(--spacing-lg) !important;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.fc-popover-title {
+    font-family: var(--font-sans);
+    color: var(--color-text-heading);
+    font-weight: 700;
+}
+
+.fc-popover-body {
+    padding: var(--spacing-sm) var(--spacing-xs) !important;
+}
+
+/* Non-current month days */
+.fc-day-other .fc-daygrid-day-top {
+    opacity: 0.4;
+}
+
+/* Non-current month days */
+.fc-day-other .fc-daygrid-day-top {
+    opacity: 0.4;
+}

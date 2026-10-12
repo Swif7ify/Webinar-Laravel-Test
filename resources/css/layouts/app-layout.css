@@ -1,0 +1,28 @@
+.app-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    min-height: 100vh;
+    background-color: var(--color-bg);
+}
+
+.app-main-content {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+
+.app-content-area {
+    flex: 1;
+    padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+@media (max-width: 1024px) {
+    .app-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .app-sidebar.hidden-mobile {
+        display: none;
+    }
+}

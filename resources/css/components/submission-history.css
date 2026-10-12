@@ -1,0 +1,128 @@
+/* resources/css/components/submission-history.css */
+
+.history-container {
+    padding: var(--spacing-lg) 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}
+
+.history-filters-card {
+    background: var(--color-bg-white);
+    padding: var(--spacing-lg);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+}
+
+.history-filters-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    gap: var(--spacing-md);
+}
+
+.filter-group {
+    flex: 1;
+    min-width: 200px;
+}
+
+.filter-group label {
+    margin-bottom: var(--spacing-xs);
+    font-weight: 600;
+    font-size: 0.8125rem;
+    color: var(--color-text-muted);
+}
+
+.btn-reset-filters {
+    font-size: 0.875rem;
+    color: var(--color-text-muted);
+    text-decoration: underline;
+    margin-bottom: var(--spacing-sm);
+    display: inline-block;
+}
+
+.btn-reset-filters:hover {
+    color: var(--color-error);
+}
+
+.history-table-card {
+    background: var(--color-bg-white);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+/* Table cells customization */
+.date-cell {
+    display: flex;
+    flex-direction: column;
+}
+
+.date-primary {
+    font-weight: 600;
+    color: var(--color-text-dark);
+}
+
+.date-secondary {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+}
+
+.student-cell {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.student-avatar {
+    width: 28px;
+    height: 28px;
+    background-color: var(--color-primary-lightest);
+    color: var(--color-primary);
+    border-radius: var(--radius-full);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.75rem;
+    flex-shrink: 0;
+}
+
+.student-name {
+    font-weight: 500;
+    color: var(--color-text-dark);
+}
+
+.subject-badge {
+    display: inline-block;
+    padding: 2px 8px;
+    background-color: var(--color-bg-subtle);
+    border-radius: var(--radius-sm);
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-text-muted);
+}
+
+/* Review status handled by x-ui.badge component */
+
+.btn-action-view {
+    color: var(--color-primary);
+    font-weight: 600;
+    font-size: 0.875rem;
+}
+
+.btn-action-view:hover {
+    text-decoration: underline;
+}
+
+.pagination-container {
+    padding: var(--spacing-md) var(--spacing-lg);
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-white);
+}
+
+.whitespace-nowrap {
+    white-space: nowrap;
+}

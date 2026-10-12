@@ -1,0 +1,211 @@
+.student-picker-toolbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-sm);
+}
+
+.student-picker-count {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    margin: 0;
+    padding: 0.45rem 0.75rem;
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary-lightest);
+    color: var(--color-text-muted);
+    font-size: 0.8125rem;
+    font-weight: 600;
+}
+
+.student-picker-count span {
+    color: var(--color-primary);
+    font-size: 0.9375rem;
+}
+
+.student-picker-search {
+    position: relative;
+    margin-bottom: var(--spacing-md);
+}
+
+.student-picker-search-icon {
+    position: absolute;
+    left: 0.95rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1rem;
+    height: 1rem;
+    color: var(--color-text-muted);
+    pointer-events: none;
+}
+
+.student-picker-search-input {
+    width: 100%;
+    box-sizing: border-box;
+    min-height: 3rem;
+    padding: 0.85rem 1rem 0.85rem 3.25rem;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-white);
+    transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.student-picker-search-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px color-mix(in srgb, var(--color-primary) 15%, transparent);
+    outline: none;
+}
+
+.student-picker-select-all-btn {
+    border: 1px solid var(--color-border);
+    background: linear-gradient(180deg, var(--color-bg-white), var(--color-primary-lightest));
+    color: var(--color-primary);
+    border-radius: var(--radius-full);
+    padding: 0.48rem 0.9rem;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color var(--transition-fast), color var(--transition-fast), border-color var(--transition-fast);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.student-picker-select-all-btn:hover:not(:disabled) {
+    background-color: var(--color-primary-lightest);
+    border-color: var(--color-primary);
+}
+
+.student-picker-select-all-btn:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.student-picker-list {
+    max-height: 18rem;
+    overflow-y: auto;
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-white);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.05);
+}
+
+.student-picker-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    padding: var(--spacing-sm) var(--spacing-md);
+    border-bottom: 1px solid var(--color-border);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+    user-select: none;
+}
+
+.student-picker-item:last-child {
+    border-bottom: none;
+}
+
+.student-picker-item:hover:not(.student-picker-item--enrolled) {
+    background-color: var(--color-primary-lightest);
+}
+
+.student-picker-item--enrolled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+.student-picker-item--selected {
+    background-color: var(--color-primary-lightest);
+}
+
+.student-picker-checkbox {
+    width: 1.125rem;
+    height: 1.125rem;
+    accent-color: var(--color-primary);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+.student-picker-item--enrolled .student-picker-checkbox {
+    cursor: not-allowed;
+}
+
+.student-picker-avatar {
+    width: 2rem;
+    height: 2rem;
+    border-radius: var(--radius-full);
+    background-color: var(--color-primary-lightest);
+    color: var(--color-primary-dark);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+    flex-shrink: 0;
+}
+
+.student-picker-item--enrolled .student-picker-avatar {
+    background-color: var(--color-neutral-lighter);
+    color: var(--color-neutral);
+}
+
+.student-picker-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.student-picker-name {
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.student-picker-email {
+    font-size: 0.75rem;
+    color: var(--color-text-muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.student-picker-enrolled-badge {
+    font-size: 0.6875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--color-neutral-dark);
+    background-color: var(--color-neutral-lighter);
+    border-radius: var(--radius-full);
+    padding: 0.15rem var(--spacing-sm);
+    flex-shrink: 0;
+}
+
+.student-picker-empty {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-xl);
+    gap: var(--spacing-sm);
+    color: var(--color-text-muted);
+    font-size: 0.875rem;
+}
+
+.student-picker-empty-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    color: var(--color-border-strong);
+}
+
+@media (max-width: 640px) {
+    .student-picker-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .student-picker-select-all-btn {
+        width: 100%;
+    }
+}

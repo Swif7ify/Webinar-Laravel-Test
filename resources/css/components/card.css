@@ -1,0 +1,33 @@
+.app-card {
+    background-color: var(--color-bg-white);
+    border-radius: var(--radius-xl);
+    border: 1px solid var(--color-border);
+    box-shadow: var(--shadow-sm);
+    padding: 0;
+    overflow: hidden;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+}
+
+.app-card:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.app-card__header {
+    padding: var(--spacing-lg) var(--spacing-xl);
+    border-bottom: 1px solid var(--color-border);
+    background-color: var(--color-bg-white);
+}
+
+.app-card__title {
+    font-size: 1.125rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+    margin: 0;
+}
+
+.app-card__body {
+    padding: var(--spacing-xl);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-lg);
+}

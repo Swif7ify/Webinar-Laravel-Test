@@ -1,0 +1,57 @@
+.class-details-banner {
+    position: relative;
+    width: 100%;
+    min-height: 160px;
+    background-color: var(--color-primary) !important;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: var(--spacing-xl);
+    display: flex;
+    align-items: center;
+    padding: var(--spacing-xl) 2.5rem; /* Larger side padding as seen in sample */
+    box-shadow: var(--shadow-sm);
+}
+
+.class-details-banner__content {
+    position: relative;
+    z-index: 2;
+    color: white !important;
+}
+
+.class-details-banner__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 1.25rem 0; /* Larger gap after title as seen in sample */
+    color: white !important;
+    line-height: 1.2;
+}
+
+.class-details-banner__meta {
+    font-size: 0.8125rem; /* Smaller, sharper font for meta */
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem; /* Specific gap for meta items */
+    font-weight: 600; /* Semi-bold as seen in sample */
+    color: white !important;
+}
+
+.class-details-banner__info-item {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    color: white !important;
+    letter-spacing: 0.01em;
+}
+
+.class-details-section {
+    margin-top: var(--spacing-2xl);
+    margin-bottom: var(--spacing-2xl);
+}
+
+.class-details-section__title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-lg);
+    color: var(--color-text-heading);
+}

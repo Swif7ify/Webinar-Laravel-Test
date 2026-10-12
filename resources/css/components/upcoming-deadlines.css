@@ -1,0 +1,188 @@
+.upcoming-deadlines {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-xl);
+    padding: var(--spacing-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+}
+
+.upcoming-deadlines__header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+    margin-bottom: var(--spacing-lg);
+}
+
+.upcoming-deadlines__header-icon {
+    width: 20px;
+    height: 20px;
+    color: var(--color-primary);
+    flex-shrink: 0;
+}
+
+.upcoming-deadlines__title {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--color-text-heading);
+}
+
+/* ── Timeline ── */
+
+.deadline-timeline {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.deadline-timeline__empty {
+    padding: var(--spacing-xl) 0;
+    text-align: center;
+}
+
+.deadline-timeline__empty p {
+    margin: 0;
+    font-size: 0.9375rem;
+    color: var(--color-text-muted);
+}
+
+/* ── Deadline Item ── */
+
+.deadline-item {
+    display: flex;
+    gap: var(--spacing-md);
+    align-items: flex-start;
+}
+
+.deadline-item__connector {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+    padding-top: 0.25rem;
+}
+
+.deadline-item__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: var(--radius-full);
+    border: 2.5px solid;
+    background-color: var(--color-bg-white);
+    flex-shrink: 0;
+    z-index: 1;
+}
+
+.deadline-item__line {
+    width: 2px;
+    flex: 1;
+    min-height: 2.5rem;
+    background-color: var(--color-border);
+    margin: 0.25rem 0;
+}
+
+/* Urgency variants */
+
+.deadline-item--urgent .deadline-item__dot {
+    border-color: var(--color-error);
+    background-color: var(--color-error);
+}
+
+.deadline-item--warning .deadline-item__dot {
+    border-color: var(--color-warning);
+    background-color: var(--color-warning);
+}
+
+.deadline-item--normal .deadline-item__dot {
+    border-color: var(--color-neutral-light);
+    background-color: var(--color-neutral-lighter);
+}
+
+.deadline-item--success .deadline-item__dot {
+    border-color: var(--color-success);
+    background-color: var(--color-success);
+}
+
+.deadline-item--danger .deadline-item__dot {
+    border-color: var(--color-error);
+    background-color: var(--color-error);
+}
+
+/* ── Deadline Card ── */
+
+.deadline-item__card {
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-sm) var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+    flex: 1;
+    min-width: 0;
+}
+
+.deadline-item--urgent .deadline-item__card {
+    border-color: var(--color-error-light);
+    background-color: var(--color-error-lighter);
+}
+
+.deadline-item--danger .deadline-item__card {
+    border-color: var(--color-error-light);
+    background-color: var(--color-error-lighter);
+}
+
+.deadline-item--success .deadline-item__card {
+    border-color: var(--color-success-light);
+    background-color: var(--color-success-lighter);
+}
+
+.deadline-item__meta {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-sm);
+    margin-bottom: 0.2rem;
+}
+
+.deadline-item__date {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-text-dark);
+}
+
+.deadline-item__time {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+.deadline-item__course {
+    margin: 0 0 0.1rem 0;
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--color-primary);
+}
+
+.deadline-item__title {
+    margin: 0;
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--color-text-heading);
+    line-height: 1.3;
+}
+
+/* ── Dashboard bottom grid ── */
+
+.dashboard-bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 280px;
+    gap: var(--spacing-lg);
+    align-items: start;
+}
+
+@media (max-width: 1200px) {
+    .dashboard-bottom-grid {
+        grid-template-columns: 1fr;
+    }
+}

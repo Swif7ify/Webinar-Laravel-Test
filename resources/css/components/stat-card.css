@@ -1,0 +1,118 @@
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--spacing-lg);
+    margin-bottom: var(--spacing-xl);
+}
+
+.stat-card {
+    background-color: var(--color-bg-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.stat-card-header {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-sm);
+}
+
+.stat-card-icon-wrapper {
+    width: 32px;
+    height: 32px;
+    border-radius: var(--radius-sm);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.stat-card-icon-wrapper svg {
+    width: 18px;
+    height: 18px;
+}
+
+.stat-card-title {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+.stat-card-body {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: var(--spacing-sm);
+}
+
+.stat-card-value {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: var(--color-text-heading);
+    line-height: 1;
+}
+
+.stat-card-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-xs);
+    font-size: 0.75rem;
+    font-weight: 700;
+    margin-top: var(--spacing-sm);
+}
+
+.stat-trend-icon {
+    width: 14px;
+    height: 14px;
+}
+
+/* Color Variants */
+.stat-card.color-primary .stat-card-icon-wrapper {
+    background-color: var(--color-primary-lightest);
+    color: var(--color-primary);
+}
+
+.stat-card.color-primary .stat-card-link {
+    border-color: var(--color-primary-lightest);
+    color: var(--color-primary-light);
+}
+
+.stat-card.color-primary .stat-card-link:hover {
+    background-color: var(--color-primary-lightest);
+    color: var(--color-primary);
+}
+
+.stat-card.color-success .stat-card-icon-wrapper {
+    background-color: var(--color-success-lighter);
+    color: var(--color-success);
+}
+
+.stat-card.color-success .stat-card-link {
+    border-color: var(--color-success-lighter);
+    color: var(--color-success-light);
+}
+
+.stat-card.color-success .stat-card-link:hover {
+    background-color: var(--color-success-lighter);
+    color: var(--color-success);
+}
+
+.stat-card.color-warning .stat-card-icon-wrapper {
+    background-color: var(--color-warning-lighter);
+    color: var(--color-warning);
+}
+
+.stat-card.color-warning .stat-card-link {
+    border-color: var(--color-warning-lighter);
+    color: var(--color-warning-light);
+}
+
+.stat-card.color-warning .stat-card-link:hover {
+    background-color: var(--color-warning-lighter);
+    color: var(--color-warning);
+}
